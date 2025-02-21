@@ -39,7 +39,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <script>
 
 	var foodpoisoning_count = 0;
-        var stomachflu_count = 0;
+        var gastroenteritis_count = 0;
 
 
         function foodpoisoningAdd(){
@@ -48,16 +48,16 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         }
 	
-        function stomachfluAdd(){
-            stomachflu_count = stomachflu_count + 1;
+        function gastroenteritisAdd(){
+            gastroenteritis_count = stomachflu_count + 1;
 
         }
 
 	function resultsPercent () {
 		var resultText = document.getElementById("results");
 		var foodpoisoningPercent = (foodpoisoning_count/4)*100;
-		var stomachfluPercent = (stomachflu_count/4)*100; 
-		resultText.innerHTML = "Probability it is foodpoisoning =" + foodpoisoningPercent + "<br> Probability it is a stomachflu =" + stomachfluPercent; 
+		var gastroenteritisPercent = (gastroenteritis_count/4)*100; 
+		resultText.innerHTML = "Probability it is foodpoisoning =" + foodpoisoningPercent + "<br> Probability it is a gastroenteritis =" + gastroenteritisPercent; 
 	}
 </script>	
 
@@ -88,7 +88,39 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <body>
 	
 	<!-- HERE IS WHERE ALL OF YOUR HTML PAGES GO -->
-	REPLACE THIS TEXT
+	<div id="header" class="w3-container w3-flat-carrot">
+
+<!this is where I started my questions> 
+
+	<h1>Food Poisoning or Gastroenteritis?</h1>
+</div>
+	
+<div id="content" class="w3-container">
+	<p>Are you feeling like you might have food poisoning but wonder if it is the stomach flu? Answer a few short questions to find out!</p>
+	
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+	
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+ 	
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+
+<div class="page" id="one">
+	<div id="header" class="w3-container w3-flat-carrot">
+		
+		<h1>Question 1</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p>Do you have a fever?</p> 
+	<a href="#two"  onclick="gastroenteritisAdd();" class="w3-btn w3-black"> Yes</a>
+</div>	
+        <a href="#two"  onclick="foodpoisoningAdd();" class="w3-btn w3-black">No</a>
+<! I chose to be a div between the two buttons so they don't appear on the same line> 
+    	</div>
+</div>
+
+<! created a second page for my next question> 
+	
 	
 </body>
 </html>
